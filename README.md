@@ -1,17 +1,56 @@
-# StateSearch
-This repository contains a Java application called StateSearchApp, designed to help users search for state names within a predefined list of U.S. states. The application features a simple menu-driven interface that allows users to display all state names or search for specific patterns within them.
+﻿# Service Territory Search Console
 
-<b>Key Features:</b>
+## Overview
 
--State List: The app includes a complete list of the 50 U.S. states stored in an array.
--Menu Navigation: Users can easily navigate through options to display the list of states or perform searches.
--Pattern Search: The application implements the Boyer-Moore string search algorithm for efficient searching of user-defined patterns within the state names.
+Service Territory Search Console is a Java-based internal lookup utility for reviewing U.S. state coverage, searching territory entries, and filtering operational regions.
 
-<b>How It Works:</b>
+This project is positioned as a recruiter-ready Java console portfolio piece. It upgrades a generic state-search exercise into a more practical internal operations tool that better matches sales support, logistics planning, territory coverage lookup, and service region review workflows.
 
--Display Menu: Users are presented with a menu to either display the list of states, search for a pattern, or exit the application.
--Display States: When the user selects the option to display states, the application prints all 50 states to the console.
--Search Functionality: Users can enter a search pattern, and the application utilizes the Boyer-Moore algorithm to find and display the indices of matches within the concatenated state names.
--Exit Option: Users can exit the application gracefully.
+## Real-World Business Use Case
 
-This project serves as a practical example of basic Java programming concepts, including user input handling, string manipulation, and efficient searching algorithms. It's an excellent resource for those looking to enhance their understanding of these topics while working on a real-world application.
+This project maps to practical workflows used by:
+
+- Sales Operations Teams
+- Logistics And Service Coverage Teams
+- Territory Planning Workflows
+- Internal Lookup Utilities
+- Java Console Application Development
+
+A team may need to answer questions such as:
+
+- Is a state part of the covered service territory?
+- Which states belong to a specific region?
+- How can a team search for a state quickly by name or code?
+- How can a simple console utility present territory coverage more clearly?
+
+This tool is useful for territory lookup, internal reference workflows, and portfolio presentation of a small Java operations utility.
+
+## Key Features
+
+- Full Covered State Listing
+- Search By State Name
+- Search By State Code
+- Region Filtering
+- Coverage Summary Reporting
+- Clean Console Workflow
+- Maven Project Structure
+
+## Tech Stack
+
+- Java 17
+- Maven
+
+## Repository Contents
+
+- `pom.xml`
+- `src/main/java/com/territory/Main.java`
+- `src/main/java/com/territory/TerritoryState.java`
+- `src/main/java/com/territory/TerritorySearchService.java`
+- `README.md`
+
+## How To Run
+
+### Build
+
+```powershell
+mvn clean package
