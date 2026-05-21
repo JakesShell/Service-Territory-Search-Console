@@ -1,2 +1,5 @@
-target/
-*.bak
+﻿target
+.idea
+*.iml
+.env
+.DS_Store

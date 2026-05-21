@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoDispatch Cloud Service Territory & SLA Routing Console</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand-mark">GD</div>
+        <div>
+          <strong>GeoDispatch</strong>
+          <span>Cloud Service Territory & SLA Routing</span>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Territory Routing Console</p>
+          <h1>Route service coverage with SLA clarity.</h1>
+          <p>
+            GeoDispatch helps cloud support teams search territory coverage, match service tiers,
+            review incident load, and route customer requests to the correct support queue.
+          </p>
+          <div class="hero-actions">
+            <button id="route-california" type="button">Route California</button>
+            <button id="reset-filters" class="ghost-button" type="button">Reset Filters</button>
+          </div>
+        </div>
+
+        <aside class="portfolio-card">
+          <span>Routing State</span>
+          <strong id="portfolio-state">--</strong>
+          <p id="portfolio-summary">Loading territory routing summary...</p>
+        </aside>
+      </section>
+    </header>
+
+    <section class="metric-grid">
+      <article class="metric-card">
+        <span>Total Territories</span>
+        <strong id="metric-total">--</strong>
+        <small>Covered service states</small>
+      </article>
+      <article class="metric-card">
+        <span>Enterprise</span>
+        <strong id="metric-enterprise">--</strong>
+        <small>Priority SLA coverage</small>
+      </article>
+      <article class="metric-card">
+        <span>Active Incidents</span>
+        <strong id="metric-incidents">--</strong>
+        <small>Open regional load</small>
+      </article>
+      <article class="metric-card">
+        <span>Avg SLA</span>
+        <strong id="metric-sla">--</strong>
+        <small>Minutes to ownership</small>
+      </article>
+    </section>
+
+    <section class="workflow-strip">
+      <div class="workflow-step">
+        <span>1</span>
+        <strong>Search Coverage</strong>
+        <p>Find a state, region, tier, queue, or cloud region.</p>
+      </div>
+      <div class="workflow-step">
+        <span>2</span>
+        <strong>Select Territory</strong>
+        <p>Review SLA tier, incidents, and support queue.</p>
+      </div>
+      <div class="workflow-step">
+        <span>3</span>
+        <strong>Route Request</strong>
+        <p>Generate routing and escalation guidance.</p>
+      </div>
+      <div class="workflow-step">
+        <span>4</span>
+        <strong>Escalate If Needed</strong>
+        <p>Send high-load or enterprise requests to the right desk.</p>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Coverage Lookup</p>
+            <h2>Service Territory Queue</h2>
+          </div>
+
+          <div class="filters">
+            <input id="search-input" type="search" placeholder="Search state, code, region, tier..." />
+            <select id="region-filter">
+              <option>All</option>
+              <option>Northeast</option>
+              <option>Midwest</option>
+              <option>South</option>
+              <option>West</option>
+            </select>
+            <select id="tier-filter">
+              <option>All</option>
+              <option>Enterprise</option>
+              <option>Premium</option>
+              <option>Standard</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Territory</th>
+                <th>Region</th>
+                <th>Tier</th>
+                <th>SLA</th>
+                <th>Cloud Region</th>
+                <th>Incidents</th>
+              </tr>
+            </thead>
+            <tbody id="territory-table"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <aside class="panel detail-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Routing Decision</p>
+            <h2>Dispatch Detail</h2>
+          </div>
+        </div>
+
+        <div id="routing-detail" class="empty-state">
+          Select a territory to generate routing guidance.
+        </div>
+      </aside>
+    </section>
+
+    <section class="secondary-grid">
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Regional Coverage</p>
+            <h2>Dispatch Load By Region</h2>
+          </div>
+        </div>
+        <div id="region-summary" class="region-grid"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Cloud Operations Fit</p>
+            <h2>Why This Matters</h2>
+          </div>
+        </div>
+        <div class="ops-card">
+          <p>
+            This console simulates how a cloud support team routes customer requests by geography,
+            SLA tier, incident pressure, cloud region, and escalation path.
+          </p>
+          <ul>
+            <li>REST API territory lookup</li>
+            <li>SLA-based routing decisions</li>
+            <li>Enterprise escalation recommendations</li>
+            <li>Regional incident-load awareness</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta-panel">
+      <div>
+        <p class="eyebrow">Recruiter Review Moment</p>
+        <h2>Built as a Java Spring Boot cloud operations tool.</h2>
+        <p>
+          GeoDispatch demonstrates Java backend API design, routing logic, test coverage,
+          frontend workflow clarity, SLA thinking, and cloud support operations relevance.
+        </p>
+      </div>
+      <a href="/api/health" target="_blank" rel="noreferrer">View API Health</a>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
